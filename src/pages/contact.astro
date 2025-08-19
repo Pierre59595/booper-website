@@ -1,0 +1,543 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { Mail, Phone, MapPin, Clock, MessageSquare, Calendar, ArrowRight } from 'lucide-react';
+---
+
+<BaseLayout title="Contact - Booper" description="Contactez nos experts pricing pour une démonstration ou un conseil personnalisé">
+  <!-- Hero Section -->
+  <section class="pt-32 pb-20 bg-gradient-to-br from-primary-50 to-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-4xl mx-auto">
+        <h1 class="text-5xl font-bold text-gray-900 mb-6">
+          Contactez nos 
+          <span class="text-primary-600">experts</span>
+        </h1>
+        <p class="text-xl text-gray-600 mb-8">
+          Échangeons sur vos défis pricing et découvrons ensemble comment Booper peut transformer votre performance
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Options -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+        <div class="text-center p-8 bg-primary-50 rounded-xl hover:bg-primary-100 transition-colors">
+          <MessageSquare class="h-12 w-12 text-primary-600 mx-auto mb-4" />
+          <h3 class="text-xl font-semibold text-gray-900 mb-4">Demander une démo</h3>
+          <p class="text-gray-600 mb-6">
+            Découvrez nos solutions en action avec une démonstration personnalisée adaptée à votre secteur.
+          </p>
+          <a href="#demo-form" class="inline-flex items-center px-6 py-3 bg-primary-600 text-white font-semibold rounded-lg hover:bg-primary-700 transition-colors">
+            Réserver une démo
+            <ArrowRight class="ml-2 h-5 w-5" />
+          </a>
+        </div>
+
+        <div class="text-center p-8 bg-secondary-50 rounded-xl hover:bg-secondary-100 transition-colors">
+          <Phone class="h-12 w-12 text-secondary-600 mx-auto mb-4" />
+          <h3 class="text-xl font-semibold text-gray-900 mb-4">Conseil gratuit</h3>
+          <p class="text-gray-600 mb-6">
+            Échangez avec nos experts pour un premier diagnostic de vos enjeux pricing sans engagement.
+          </p>
+          <a href="tel:+33123456789" class="inline-flex items-center px-6 py-3 bg-secondary-600 text-white font-semibold rounded-lg hover:bg-secondary-700 transition-colors">
+            Appeler maintenant
+            <Phone class="ml-2 h-5 w-5" />
+          </a>
+        </div>
+
+        <div class="text-center p-8 bg-orange-50 rounded-xl hover:bg-orange-100 transition-colors">
+          <Calendar class="h-12 w-12 text-orange-600 mx-auto mb-4" />
+          <h3 class="text-xl font-semibold text-gray-900 mb-4">Rendez-vous expert</h3>
+          <p class="text-gray-600 mb-6">
+            Planifiez un entretien approfondi avec nos consultants pour définir votre stratégie pricing.
+          </p>
+          <a href="#contact-form" class="inline-flex items-center px-6 py-3 bg-orange-600 text-white font-semibold rounded-lg hover:bg-orange-700 transition-colors">
+            Planifier un RDV
+            <Calendar class="ml-2 h-5 w-5" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Contact Form -->
+  <section id="demo-form" class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <!-- Contact Form -->
+        <div class="bg-white p-8 rounded-xl shadow-lg">
+          <h2 class="text-3xl font-bold text-gray-900 mb-6">
+            Demander une démonstration
+          </h2>
+          <p class="text-gray-600 mb-8">
+            Remplissez ce formulaire et nous vous recontacterons sous 24h pour organiser une démonstration personnalisée.
+          </p>
+
+          <form class="space-y-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <label for="firstName" class="block text-sm font-medium text-gray-700 mb-2">
+                  Prénom *
+                </label>
+                <input 
+                  type="text" 
+                  id="firstName" 
+                  name="firstName" 
+                  required
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
+                  placeholder="Votre prénom"
+                />
+              </div>
+              <div>
+                <label for="lastName" class="block text-sm font-medium text-gray-700 mb-2">
+                  Nom *
+                </label>
+                <input 
+                  type="text" 
+                  id="lastName" 
+                  name="lastName" 
+                  required
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
+                  placeholder="Votre nom"
+                />
+              </div>
+            </div>
+
+            <div>
+              <label for="email" class="block text-sm font-medium text-gray-700 mb-2">
+                Email professionnel *
+              </label>
+              <input 
+                type="email" 
+                id="email" 
+                name="email" 
+                required
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
+                placeholder="votre.email@entreprise.com"
+              />
+            </div>
+
+            <div>
+              <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">
+                Téléphone
+              </label>
+              <input 
+                type="tel" 
+                id="phone" 
+                name="phone"
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
+                placeholder="+33 1 XX XX XX XX"
+              />
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <label for="company" class="block text-sm font-medium text-gray-700 mb-2">
+                  Entreprise *
+                </label>
+                <input 
+                  type="text" 
+                  id="company" 
+                  name="company" 
+                  required
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
+                  placeholder="Nom de votre entreprise"
+                />
+              </div>
+              <div>
+                <label for="jobTitle" class="block text-sm font-medium text-gray-700 mb-2">
+                  Fonction
+                </label>
+                <input 
+                  type="text" 
+                  id="jobTitle" 
+                  name="jobTitle"
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
+                  placeholder="Votre fonction"
+                />
+              </div>
+            </div>
+
+            <div>
+              <label for="sector" class="block text-sm font-medium text-gray-700 mb-2">
+                Secteur d'activité
+              </label>
+              <select 
+                id="sector" 
+                name="sector"
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
+              >
+                <option value="">Sélectionnez votre secteur</option>
+                <option value="retail">Grande Distribution</option>
+                <option value="ecommerce">E-commerce</option>
+                <option value="automotive">Automobile</option>
+                <option value="diy">Bricolage & Jardin</option>
+                <option value="fashion">Mode & Lifestyle</option>
+                <option value="health">Santé & Bien-être</option>
+                <option value="other">Autre</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="challenge" class="block text-sm font-medium text-gray-700 mb-2">
+                Votre principal défi pricing
+              </label>
+              <select 
+                id="challenge" 
+                name="challenge"
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
+              >
+                <option value="optimization">Optimisation des prix de vente</option>
+                <option value="margin">Amélioration des marges</option>
+                <option value="competition">Veille concurrentielle</option>
+                <option value="promotion">Gestion des promotions</option>
+                <option value="automation">Automatisation du pricing</option>
+                <option value="reporting">Reporting et analytics</option>
+                <option value="other">Autre</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="message" class="block text-sm font-medium text-gray-700 mb-2">
+                Message
+              </label>
+              <textarea 
+                id="message" 
+                name="message" 
+                rows="4"
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
+                placeholder="Décrivez-nous vos besoins et objectifs..."
+              ></textarea>
+            </div>
+
+            <div class="flex items-start space-x-3">
+              <input 
+                type="checkbox" 
+                id="consent" 
+                name="consent" 
+                required
+                class="mt-1 h-4 w-4 text-primary-600 focus:ring-primary-500 border-gray-300 rounded"
+              />
+              <label for="consent" class="text-sm text-gray-600">
+                J'accepte d'être recontacté par Booper concernant ma demande et de recevoir des informations sur les solutions de pricing. *
+              </label>
+            </div>
+
+            <button 
+              type="submit"
+              class="w-full px-8 py-4 bg-primary-600 text-white font-semibold rounded-lg hover:bg-primary-700 transition-colors flex items-center justify-center"
+            >
+              Envoyer ma demande
+              <ArrowRight class="ml-2 h-5 w-5" />
+            </button>
+          </form>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="space-y-8">
+          <!-- Contact Details -->
+          <div class="bg-white p-8 rounded-xl shadow-lg">
+            <h3 class="text-2xl font-bold text-gray-900 mb-6">Nos coordonnées</h3>
+            
+            <div class="space-y-6">
+              <div class="flex items-start space-x-4">
+                <div class="bg-primary-100 w-12 h-12 rounded-lg flex items-center justify-center">
+                  <MapPin class="h-6 w-6 text-primary-600" />
+                </div>
+                <div>
+                  <h4 class="font-semibold text-gray-900 mb-1">Adresse</h4>
+                  <p class="text-gray-600">
+                    15 Avenue des Champs-Élysées<br>
+                    75008 Paris, France
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex items-start space-x-4">
+                <div class="bg-secondary-100 w-12 h-12 rounded-lg flex items-center justify-center">
+                  <Phone class="h-6 w-6 text-secondary-600" />
+                </div>
+                <div>
+                  <h4 class="font-semibold text-gray-900 mb-1">Téléphone</h4>
+                  <p class="text-gray-600">+33 1 42 86 83 15</p>
+                  <p class="text-sm text-gray-500">Lun-Ven 9h-18h</p>
+                </div>
+              </div>
+
+              <div class="flex items-start space-x-4">
+                <div class="bg-orange-100 w-12 h-12 rounded-lg flex items-center justify-center">
+                  <Mail class="h-6 w-6 text-orange-600" />
+                </div>
+                <div>
+                  <h4 class="font-semibold text-gray-900 mb-1">Email</h4>
+                  <p class="text-gray-600">contact@booper.fr</p>
+                  <p class="text-sm text-gray-500">Réponse sous 24h</p>
+                </div>
+              </div>
+
+              <div class="flex items-start space-x-4">
+                <div class="bg-purple-100 w-12 h-12 rounded-lg flex items-center justify-center">
+                  <Clock class="h-6 w-6 text-purple-600" />
+                </div>
+                <div>
+                  <h4 class="font-semibold text-gray-900 mb-1">Horaires</h4>
+                  <p class="text-gray-600">
+                    Lundi - Vendredi : 9h00 - 18h00<br>
+                    Weekend : Fermé
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick Contact -->
+          <div class="bg-primary-600 p-8 rounded-xl text-white">
+            <h3 class="text-2xl font-bold mb-4">Besoin d'une réponse rapide ?</h3>
+            <p class="text-primary-100 mb-6">
+              Appelez-nous directement ou envoyez-nous un email. Notre équipe vous répond dans les plus brefs délais.
+            </p>
+            <div class="space-y-4">
+              <a 
+                href="tel:+33142868315"
+                class="flex items-center justify-center px-6 py-3 bg-white text-primary-600 font-semibold rounded-lg hover:bg-gray-50 transition-colors"
+              >
+                <Phone class="h-5 w-5 mr-2" />
+                Appeler maintenant
+              </a>
+              <a 
+                href="mailto:contact@booper.fr"
+                class="flex items-center justify-center px-6 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white/10 transition-colors"
+              >
+                <Mail class="h-5 w-5 mr-2" />
+                Envoyer un email
+              </a>
+            </div>
+          </div>
+
+          <!-- FAQ Quick Links -->
+          <div class="bg-gray-50 p-8 rounded-xl">
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Questions fréquentes</h3>
+            <div class="space-y-3">
+              <div>
+                <h4 class="font-medium text-gray-900">Combien de temps dure une démonstration ?</h4>
+                <p class="text-sm text-gray-600">Entre 30 et 60 minutes selon vos besoins spécifiques.</p>
+              </div>
+              <div>
+                <h4 class="font-medium text-gray-900">La démonstration est-elle gratuite ?</h4>
+                <p class="text-sm text-gray-600">Oui, totalement gratuite et sans engagement.</p>
+              </div>
+              <div>
+                <h4 class="font-medium text-gray-900">Délai de mise en œuvre ?</h4>
+                <p class="text-sm text-gray-600">Entre 4 et 12 semaines selon la complexité du projet.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Alternative Contact Methods -->
+  <section id="contact-form" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-gray-900 mb-4">
+          Autres moyens de nous contacter
+        </h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Choisissez le canal qui vous convient le mieux
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <!-- Sales Team -->
+        <div class="text-center p-6 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors">
+          <div class="bg-primary-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+            <MessageSquare class="h-8 w-8 text-primary-600" />
+          </div>
+          <h3 class="text-lg font-semibold text-gray-900 mb-2">Équipe Commerciale</h3>
+          <p class="text-gray-600 text-sm mb-4">
+            Pour une démonstration ou un devis personnalisé
+          </p>
+          <a href="mailto:sales@booper.fr" class="text-primary-600 hover:text-primary-700 font-medium text-sm">
+            sales@booper.fr
+          </a>
+        </div>
+
+        <!-- Support Team -->
+        <div class="text-center p-6 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors">
+          <div class="bg-secondary-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+            <Phone class="h-8 w-8 text-secondary-600" />
+          </div>
+          <h3 class="text-lg font-semibold text-gray-900 mb-2">Support Client</h3>
+          <p class="text-gray-600 text-sm mb-4">
+            Assistance technique et support utilisateur
+          </p>
+          <a href="mailto:support@booper.fr" class="text-secondary-600 hover:text-secondary-700 font-medium text-sm">
+            support@booper.fr
+          </a>
+        </div>
+
+        <!-- Training Team -->
+        <div class="text-center p-6 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors">
+          <div class="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+            <Calendar class="h-8 w-8 text-orange-600" />
+          </div>
+          <h3 class="text-lg font-semibold text-gray-900 mb-2">Formation</h3>
+          <p class="text-gray-600 text-sm mb-4">
+            Programmes de formation et certification
+          </p>
+          <a href="mailto:formation@booper.fr" class="text-orange-600 hover:text-orange-700 font-medium text-sm">
+            formation@booper.fr
+          </a>
+        </div>
+
+        <!-- Partnership -->
+        <div class="text-center p-6 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors">
+          <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+            <Mail class="h-8 w-8 text-purple-600" />
+          </div>
+          <h3 class="text-lg font-semibold text-gray-900 mb-2">Partenariats</h3>
+          <p class="text-gray-600 text-sm mb-4">
+            Opportunités de partenariat et collaboration
+          </p>
+          <a href="mailto:partners@booper.fr" class="text-purple-600 hover:text-purple-700 font-medium text-sm">
+            partners@booper.fr
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Office Map -->
+  <section class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-gray-900 mb-4">
+          Venez nous rendre visite
+        </h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Nos bureaux parisiens vous accueillent sur rendez-vous
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <h3 class="text-2xl font-bold text-gray-900 mb-6">Comment nous trouver</h3>
+          
+          <div class="space-y-6">
+            <div>
+              <h4 class="font-semibold text-gray-900 mb-2">En métro</h4>
+              <p class="text-gray-600">
+                • <strong>Franklin D. Roosevelt</strong> (Lignes 1, 9) - 2 min à pied<br>
+                • <strong>Champs-Élysées - Clemenceau</strong> (Lignes 1, 13) - 5 min à pied<br>
+                • <strong>George V</strong> (Ligne 1) - 7 min à pied
+              </p>
+            </div>
+
+            <div>
+              <h4 class="font-semibold text-gray-900 mb-2">En RER</h4>
+              <p class="text-gray-600">
+                • <strong>Charles de Gaulle - Étoile</strong> (RER A) - 10 min à pied<br>
+                • <strong>Auber</strong> (RER A) - 15 min à pied
+              </p>
+            </div>
+
+            <div>
+              <h4 class="font-semibold text-gray-900 mb-2">En voiture</h4>
+              <p class="text-gray-600">
+                Parking public disponible :<br>
+                • Parking Marbeuf (100m)<br>
+                • Parking George V (200m)
+              </p>
+            </div>
+
+            <div>
+              <h4 class="font-semibold text-gray-900 mb-2">Depuis les aéroports</h4>
+              <p class="text-gray-600">
+                • <strong>CDG :</strong> RER B + Métro 1 (1h)<br>
+                • <strong>Orly :</strong> Orlyval + RER B + Métro 1 (1h15)
+              </p>
+            </div>
+          </div>
+
+          <div class="mt-8 p-6 bg-white rounded-xl shadow-lg">
+            <h4 class="font-semibold text-gray-900 mb-4">Informations pratiques</h4>
+            <div class="space-y-2 text-sm text-gray-600">
+              <p>• Accès PMR : Oui, ascenseur disponible</p>
+              <p>• WiFi invité : Disponible sur demande</p>
+              <p>• Rafraîchissements : Offerts pendant les réunions</p>
+              <p>• Salle de réunion : Équipée vidéoprojecteur</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-gray-200 rounded-2xl h-96 flex items-center justify-center">
+          <div class="text-center text-gray-500">
+            <div class="text-6xl mb-4">📍</div>
+            <p class="font-semibold">Carte interactive</p>
+            <p class="text-sm">15 Avenue des Champs-Élysées</p>
+            <p class="text-sm">75008 Paris</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-20 bg-primary-600">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-4xl font-bold text-white mb-4">
+        Prêt à transformer votre pricing ?
+      </h2>
+      <p class="text-xl text-primary-100 mb-8 max-w-2xl mx-auto">
+        Nos experts vous attendent pour discuter de vos défis et vous présenter nos solutions
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="tel:+33142868315" class="inline-flex items-center px-8 py-4 bg-white text-primary-600 font-semibold rounded-lg hover:bg-gray-50 transition-colors">
+          <Phone class="mr-2 h-5 w-5" />
+          Appeler maintenant
+        </a>
+        <a href="mailto:contact@booper.fr" class="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white/10 transition-colors">
+          <Mail class="mr-2 h-5 w-5" />
+          Envoyer un email
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<script>
+  // Simple form handling
+  document.addEventListener('DOMContentLoaded', function() {
+    const form = document.querySelector('form');
+    if (form) {
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Simple form validation
+        const requiredFields = form.querySelectorAll('[required]');
+        let isValid = true;
+        
+        requiredFields.forEach(field => {
+          if (!field.value.trim()) {
+            isValid = false;
+            field.classList.add('border-red-500');
+          } else {
+            field.classList.remove('border-red-500');
+          }
+        });
+        
+        if (isValid) {
+          // In a real application, you would send the form data to your server
+          alert('Merci pour votre demande ! Nous vous recontacterons sous 24h.');
+          form.reset();
+        } else {
+          alert('Veuillez remplir tous les champs obligatoires.');
+        }
+      });
+    }
+  });
+</script>

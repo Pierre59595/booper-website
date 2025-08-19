@@ -1,0 +1,303 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { TrendingUp, Target, ShoppingCart, BarChart3, Zap, Settings, ArrowRight } from 'lucide-react';
+---
+
+<BaseLayout title="Solutions - Booper" description="Découvrez nos solutions de pricing et d'optimisation des marges">
+  <!-- Hero Section -->
+  <section class="pt-32 pb-20 bg-gradient-to-br from-primary-50 to-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-4xl mx-auto">
+        <h1 class="text-5xl font-bold text-gray-900 mb-6">
+          Nos Solutions de 
+          <span class="text-primary-600">Pricing Intelligent</span>
+        </h1>
+        <p class="text-xl text-gray-600 mb-8">
+          Des solutions complètes pour optimiser vos prix, maximiser vos marges et accélerer votre croissance
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Solutions -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-20">
+        <div>
+          <div class="bg-primary-100 w-16 h-16 rounded-xl flex items-center justify-center mb-6">
+            <TrendingUp class="h-8 w-8 text-primary-600" />
+          </div>
+          <h2 class="text-3xl font-bold text-gray-900 mb-6">Optimisation Tarifaire</h2>
+          <p class="text-lg text-gray-600 mb-6">
+            Optimisez vos prix de vente en temps réel selon vos objectifs stratégiques : 
+            maximisation de la marge, augmentation du volume, amélioration de l'image prix ou gestion optimale des stocks.
+          </p>
+          <ul class="space-y-3 mb-8">
+            <li class="flex items-center space-x-3">
+              <div class="w-2 h-2 bg-primary-600 rounded-full"></div>
+              <span class="text-gray-700">Pricing dynamique en temps réel</span>
+            </li>
+            <li class="flex items-center space-x-3">
+              <div class="w-2 h-2 bg-primary-600 rounded-full"></div>
+              <span class="text-gray-700">Analyse concurrentielle automatisée</span>
+            </li>
+            <li class="flex items-center space-x-3">
+              <div class="w-2 h-2 bg-primary-600 rounded-full"></div>
+              <span class="text-gray-700">Optimisation par segment de marché</span>
+            </li>
+          </ul>
+          <a href="/contact" class="inline-flex items-center px-6 py-3 bg-primary-600 text-white font-semibold rounded-lg hover:bg-primary-700 transition-colors">
+            En savoir plus
+            <ArrowRight class="ml-2 h-5 w-5" />
+          </a>
+        </div>
+        <div class="relative">
+          <div class="bg-gradient-to-br from-primary-500 to-primary-700 rounded-2xl p-8 text-white">
+            <h3 class="text-xl font-bold mb-4">Résultats typiques</h3>
+            <div class="space-y-4">
+              <div class="flex justify-between items-center">
+                <span>Amélioration marge</span>
+                <span class="font-bold">+15%</span>
+              </div>
+              <div class="flex justify-between items-center">
+                <span>Réduction temps d'analyse</span>
+                <span class="font-bold">-70%</span>
+              </div>
+              <div class="flex justify-between items-center">
+                <span>Augmentation CA</span>
+                <span class="font-bold">+12%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-20">
+        <div class="order-2 lg:order-1">
+          <div class="bg-secondary-50 rounded-2xl p-8">
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Fonctionnalités clés</h3>
+            <div class="grid grid-cols-2 gap-4">
+              <div class="text-center p-4 bg-white rounded-lg">
+                <BarChart3 class="h-8 w-8 text-secondary-600 mx-auto mb-2" />
+                <div class="font-semibold text-sm">Tableaux de bord</div>
+              </div>
+              <div class="text-center p-4 bg-white rounded-lg">
+                <Target class="h-8 w-8 text-secondary-600 mx-auto mb-2" />
+                <div class="font-semibold text-sm">Alertes intelligentes</div>
+              </div>
+              <div class="text-center p-4 bg-white rounded-lg">
+                <Zap class="h-8 w-8 text-secondary-600 mx-auto mb-2" />
+                <div class="font-semibold text-sm">Automatisation</div>
+              </div>
+              <div class="text-center p-4 bg-white rounded-lg">
+                <Settings class="h-8 w-8 text-secondary-600 mx-auto mb-2" />
+                <div class="font-semibold text-sm">Intégrations API</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="order-1 lg:order-2">
+          <div class="bg-secondary-100 w-16 h-16 rounded-xl flex items-center justify-center mb-6">
+            <Target class="h-8 w-8 text-secondary-600" />
+          </div>
+          <h2 class="text-3xl font-bold text-gray-900 mb-6">Pilotage de la Marge</h2>
+          <p class="text-lg text-gray-600 mb-6">
+            Surveillez et optimisez vos marges en continu avec des outils avancés de monitoring 
+            et d'analyse prédictive pour anticiper les variations du marché.
+          </p>
+          <ul class="space-y-3 mb-8">
+            <li class="flex items-center space-x-3">
+              <div class="w-2 h-2 bg-secondary-600 rounded-full"></div>
+              <span class="text-gray-700">Monitoring en temps réel</span>
+            </li>
+            <li class="flex items-center space-x-3">
+              <div class="w-2 h-2 bg-secondary-600 rounded-full"></div>
+              <span class="text-gray-700">Analyse prédictive des tendances</span>
+            </li>
+            <li class="flex items-center space-x-3">
+              <div class="w-2 h-2 bg-secondary-600 rounded-full"></div>
+              <span class="text-gray-700">Alertes automatiques</span>
+            </li>
+          </ul>
+          <a href="/contact" class="inline-flex items-center px-6 py-3 bg-secondary-600 text-white font-semibold rounded-lg hover:bg-secondary-700 transition-colors">
+            Découvrir
+            <ArrowRight class="ml-2 h-5 w-5" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Additional Solutions Grid -->
+  <section class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-gray-900 mb-4">
+          Solutions complémentaires
+        </h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Un écosystème complet pour adresser tous vos besoins en matière de pricing et de gestion commerciale
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+          <div class="bg-orange-100 w-12 h-12 rounded-lg flex items-center justify-center mb-6">
+            <ShoppingCart class="h-6 w-6 text-orange-600" />
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-4">Pilotage des Promotions</h3>
+          <p class="text-gray-600 mb-6">
+            Optimisez l'efficacité de vos campagnes promotionnelles avec des outils d'analyse 
+            et de planification avancés.
+          </p>
+          <ul class="text-sm text-gray-600 space-y-2">
+            <li>• Planification intelligente</li>
+            <li>• Mesure de performance</li>
+            <li>• Optimisation ROI</li>
+          </ul>
+        </div>
+
+        <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+          <div class="bg-purple-100 w-12 h-12 rounded-lg flex items-center justify-center mb-6">
+            <BarChart3 class="h-6 w-6 text-purple-600" />
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-4">Mix-Marge</h3>
+          <p class="text-gray-600 mb-6">
+            Analysez et optimisez votre mix produit pour maximiser la rentabilité 
+            globale de votre portefeuille.
+          </p>
+          <ul class="text-sm text-gray-600 space-y-2">
+            <li>• Analyse ABC avancée</li>
+            <li>• Optimisation du mix</li>
+            <li>• Simulation de scénarios</li>
+          </ul>
+        </div>
+
+        <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+          <div class="bg-green-100 w-12 h-12 rounded-lg flex items-center justify-center mb-6">
+            <Settings class="h-6 w-6 text-green-600" />
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-4">Optimisation des Stocks</h3>
+          <p class="text-gray-600 mb-6">
+            Réduisez vos coûts de stockage tout en évitant les ruptures grâce à 
+            notre solution d'optimisation intelligente.
+          </p>
+          <ul class="text-sm text-gray-600 space-y-2">
+            <li>• Prévision de demande</li>
+            <li>• Gestion des ruptures</li>
+            <li>• Optimisation ROI stock</li>
+          </ul>
+        </div>
+
+        <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+          <div class="bg-blue-100 w-12 h-12 rounded-lg flex items-center justify-center mb-6">
+            <Zap class="h-6 w-6 text-blue-600" />
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-4">E-commerce & Marketplace</h3>
+          <p class="text-gray-600 mb-6">
+            Solutions spécialisées pour optimiser vos performances sur les plateformes 
+            digitales et marketplaces.
+          </p>
+          <ul class="text-sm text-gray-600 space-y-2">
+            <li>• Pricing multi-canal</li>
+            <li>• Veille concurrentielle</li>
+            <li>• Automatisation</li>
+          </ul>
+        </div>
+
+        <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+          <div class="bg-red-100 w-12 h-12 rounded-lg flex items-center justify-center mb-6">
+            <Target class="h-6 w-6 text-red-600" />
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-4">RAO & Gestion des Ruptures</h3>
+          <p class="text-gray-600 mb-6">
+            Minimisez l'impact des ruptures de stock avec des stratégies de 
+            réapprovisionnement automatisé optimisées.
+          </p>
+          <ul class="text-sm text-gray-600 space-y-2">
+            <li>• Prévision des ruptures</li>
+            <li>• Réapprovisionnement auto</li>
+            <li>• Optimisation des coûts</li>
+          </ul>
+        </div>
+
+        <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+          <div class="bg-indigo-100 w-12 h-12 rounded-lg flex items-center justify-center mb-6">
+            <BarChart3 class="h-6 w-6 text-indigo-600" />
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-4">Exploitation Tickets de Caisse</h3>
+          <p class="text-gray-600 mb-6">
+            Transformez vos données de vente en insights actionnables pour optimiser 
+            votre stratégie commerciale.
+          </p>
+          <ul class="text-sm text-gray-600 space-y-2">
+            <li>• Analyse comportementale</li>
+            <li>• Segmentation client</li>
+            <li>• Recommandations IA</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technology Stack -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-gray-900 mb-4">
+          Architecture technique moderne
+        </h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Une technologie de pointe pour des performances optimales et une intégration facile
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="text-center p-8 bg-gradient-to-br from-orange-50 to-orange-100 rounded-xl">
+          <div class="text-4xl font-bold text-orange-600 mb-4">Front-end</div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-4">Angular</h3>
+          <p class="text-gray-600">
+            Interface utilisateur moderne et réactive pour une expérience optimale
+          </p>
+        </div>
+
+        <div class="text-center p-8 bg-gradient-to-br from-primary-50 to-primary-100 rounded-xl">
+          <div class="text-4xl font-bold text-primary-600 mb-4">Back-end</div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-4">Java JEE</h3>
+          <p class="text-gray-600">
+            Architecture robuste et scalable pour traiter de gros volumes de données
+          </p>
+        </div>
+
+        <div class="text-center p-8 bg-gradient-to-br from-green-50 to-green-100 rounded-xl">
+          <div class="text-4xl font-bold text-green-600 mb-4">API</div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-4">RESTful</h3>
+          <p class="text-gray-600">
+            Services web standards pour une intégration simple avec vos systèmes existants
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-20 bg-primary-600">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-4xl font-bold text-white mb-4">
+        Prêt à transformer votre pricing ?
+      </h2>
+      <p class="text-xl text-primary-100 mb-8 max-w-2xl mx-auto">
+        Contactez nos experts pour une démonstration personnalisée de nos solutions
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/contact" class="inline-flex items-center px-8 py-4 bg-white text-primary-600 font-semibold rounded-lg hover:bg-gray-50 transition-colors">
+          Demander une démo
+          <ArrowRight class="ml-2 h-5 w-5" />
+        </a>
+        <a href="/customers" class="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white/10 transition-colors">
+          Voir nos références
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

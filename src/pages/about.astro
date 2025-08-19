@@ -1,0 +1,409 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { Users, Target, Award, TrendingUp, ArrowRight, Heart, Lightbulb, Shield } from 'lucide-react';
+---
+
+<BaseLayout title="À propos - Booper" description="Découvrez l'histoire, l'équipe et les valeurs de Booper, expert en solutions de pricing">
+  <!-- Hero Section -->
+  <section class="pt-32 pb-20 bg-gradient-to-br from-primary-50 to-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-4xl mx-auto">
+        <h1 class="text-5xl font-bold text-gray-900 mb-6">
+          À propos de 
+          <span class="text-primary-600">Booper</span>
+        </h1>
+        <p class="text-xl text-gray-600 mb-8">
+          Depuis plus de 15 ans, nous accompagnons les entreprises dans l'optimisation de leur performance pricing 
+          avec expertise, innovation et passion.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Company Overview -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-4xl font-bold text-gray-900 mb-6">
+            Notre mission
+          </h2>
+          <p class="text-lg text-gray-600 mb-6">
+            Chez Booper, nous croyons que chaque entreprise mérite d'avoir accès aux meilleures solutions 
+            de pricing pour maximiser sa rentabilité et rester compétitive sur son marché.
+          </p>
+          <p class="text-lg text-gray-600 mb-8">
+            Notre équipe motivée et expérimentée vous accompagne dans la réalisation de vos projets 
+            pour des missions à court ou long terme, avec une approche personnalisée et des outils technologiques 
+            de pointe.
+          </p>
+          
+          <div class="space-y-4">
+            <div class="flex items-center space-x-3">
+              <div class="bg-primary-100 w-8 h-8 rounded-full flex items-center justify-center">
+                <TrendingUp class="h-4 w-4 text-primary-600" />
+              </div>
+              <span class="text-gray-700">Technologie moderne et performante</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="relative">
+          <div class="bg-gradient-to-br from-primary-500 to-primary-700 rounded-2xl p-8 text-white">
+            <h3 class="text-2xl font-bold mb-6">Nos domaines d'expertise</h3>
+            <div class="space-y-4 text-primary-100">
+              <div>• Pricing et optimisation tarifaire</div>
+              <div>• Pilotage de la marge et mix-marge</div>
+              <div>• Pilotage de la promotion</div>
+              <div>• Optimisation des stocks et RAO</div>
+              <div>• Gestion des ruptures</div>
+              <div>• Exploitation des tickets de caisse</div>
+              <div>• Carte de fidélité et e-commerce</div>
+              <div>• Construction de modèles mathématiques</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Company Values -->
+  <section class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-gray-900 mb-4">
+          Nos valeurs
+        </h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Les principes qui guident notre action au quotidien
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-white p-8 rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow">
+          <div class="bg-primary-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+            <Lightbulb class="h-8 w-8 text-primary-600" />
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-4">Innovation</h3>
+          <p class="text-gray-600">
+            Nous restons à la pointe de la technologie pour vous offrir les solutions 
+            les plus avancées et performantes du marché.
+          </p>
+        </div>
+
+        <div class="bg-white p-8 rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow">
+          <div class="bg-secondary-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+            <Heart class="h-8 w-8 text-secondary-600" />
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-4">Engagement</h3>
+          <p class="text-gray-600">
+            Notre réussite se mesure à celle de nos clients. Nous nous engageons 
+            pleinement dans votre succès avec passion et détermination.
+          </p>
+        </div>
+
+        <div class="bg-white p-8 rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow">
+          <div class="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+            <Shield class="h-8 w-8 text-orange-600" />
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-4">Fiabilité</h3>
+          <p class="text-gray-600">
+            Nous construisons des relations durables basées sur la confiance, 
+            la transparence et la qualité de nos livrables.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Section -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-gray-900 mb-4">
+          Notre équipe
+        </h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Des experts passionnés qui mettent leur expertise au service de votre réussite
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Team Member 1 -->
+        <div class="bg-gray-50 p-8 rounded-xl text-center hover:bg-gray-100 transition-colors">
+          <div class="w-24 h-24 bg-primary-200 rounded-full flex items-center justify-center mx-auto mb-6">
+            <span class="text-2xl font-bold text-primary-700">MD</span>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">Marc Dupont</h3>
+          <div class="text-primary-600 font-medium mb-4">Directeur Général</div>
+          <p class="text-gray-600 text-sm">
+            15+ années d'expérience dans le conseil en pricing. Expert en transformation digitale 
+            et optimisation de la performance commerciale.
+          </p>
+        </div>
+
+        <!-- Team Member 2 -->
+        <div class="bg-gray-50 p-8 rounded-xl text-center hover:bg-gray-100 transition-colors">
+          <div class="w-24 h-24 bg-secondary-200 rounded-full flex items-center justify-center mx-auto mb-6">
+            <span class="text-2xl font-bold text-secondary-700">SL</span>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">Sophie Lemaire</h3>
+          <div class="text-secondary-600 font-medium mb-4">Directrice Technique</div>
+          <p class="text-gray-600 text-sm">
+            Architecte logiciel spécialisée en solutions enterprise. Pilote le développement 
+            de nos plateformes avec Angular et Java JEE.
+          </p>
+        </div>
+
+        <!-- Team Member 3 -->
+        <div class="bg-gray-50 p-8 rounded-xl text-center hover:bg-gray-100 transition-colors">
+          <div class="w-24 h-24 bg-orange-200 rounded-full flex items-center justify-center mx-auto mb-6">
+            <span class="text-2xl font-bold text-orange-700">AM</span>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">Antoine Martin</h3>
+          <div class="text-orange-600 font-medium mb-4">Responsable Consulting</div>
+          <p class="text-gray-600 text-sm">
+            Consultant senior en pricing avec une expertise sectorielle approfondie. 
+            Accompagne nos clients dans leurs projets de transformation.
+          </p>
+        </div>
+
+        <!-- Team Member 4 -->
+        <div class="bg-gray-50 p-8 rounded-xl text-center hover:bg-gray-100 transition-colors">
+          <div class="w-24 h-24 bg-purple-200 rounded-full flex items-center justify-center mx-auto mb-6">
+            <span class="text-2xl font-bold text-purple-700">CB</span>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">Claire Bernard</h3>
+          <div class="text-purple-600 font-medium mb-4">Data Scientist</div>
+          <p class="text-gray-600 text-sm">
+            Spécialiste en intelligence artificielle et machine learning appliqués au pricing. 
+            Développe nos algorithmes d'optimisation avancés.
+          </p>
+        </div>
+
+        <!-- Team Member 5 -->
+        <div class="bg-gray-50 p-8 rounded-xl text-center hover:bg-gray-100 transition-colors">
+          <div class="w-24 h-24 bg-green-200 rounded-full flex items-center justify-center mx-auto mb-6">
+            <span class="text-2xl font-bold text-green-700">LR</span>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">Laurent Robert</h3>
+          <div class="text-green-600 font-medium mb-4">Responsable Formation</div>
+          <p class="text-gray-600 text-sm">
+            Expert en pédagogie et transmission des connaissances. Conçoit et anime 
+            nos programmes de formation certifiants.
+          </p>
+        </div>
+
+        <!-- Team Member 6 -->
+        <div class="bg-gray-50 p-8 rounded-xl text-center hover:bg-gray-100 transition-colors">
+          <div class="w-24 h-24 bg-blue-200 rounded-full flex items-center justify-center mx-auto mb-6">
+            <span class="text-2xl font-bold text-blue-700">EM</span>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">Émilie Moreau</h3>
+          <div class="text-blue-600 font-medium mb-4">Customer Success Manager</div>
+          <p class="text-gray-600 text-sm">
+            Assure le succès de nos clients tout au long de leur parcours. 
+            Garantit une adoption optimale de nos solutions.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Company History -->
+  <section class="py-20 bg-primary-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-gray-900 mb-4">
+          Notre histoire
+        </h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          15 années d'innovation et de croissance au service de l'excellence pricing
+        </p>
+      </div>
+
+      <div class="relative">
+        <div class="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-primary-200"></div>
+        
+        <div class="space-y-12">
+          <!-- 2010 -->
+          <div class="relative flex items-center">
+            <div class="flex-1 text-right pr-8">
+              <div class="bg-white p-6 rounded-xl shadow-lg">
+                <h3 class="text-xl font-bold text-gray-900 mb-2">2010 - Création</h3>
+                <p class="text-gray-600">
+                  Fondation de Booper avec une vision : démocratiser l'accès aux solutions 
+                  de pricing avancées pour toutes les entreprises.
+                </p>
+              </div>
+            </div>
+            <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-primary-600 rounded-full"></div>
+            <div class="flex-1 pl-8"></div>
+          </div>
+
+          <!-- 2013 -->
+          <div class="relative flex items-center">
+            <div class="flex-1 pr-8"></div>
+            <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-primary-600 rounded-full"></div>
+            <div class="flex-1 text-left pl-8">
+              <div class="bg-white p-6 rounded-xl shadow-lg">
+                <h3 class="text-xl font-bold text-gray-900 mb-2">2013 - Premiers succès</h3>
+                <p class="text-gray-600">
+                  Nos premiers clients grandes enseignes nous font confiance. 
+                  Développement de notre expertise sectorielle.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2016 -->
+          <div class="relative flex items-center">
+            <div class="flex-1 text-right pr-8">
+              <div class="bg-white p-6 rounded-xl shadow-lg">
+                <h3 class="text-xl font-bold text-gray-900 mb-2">2016 - Innovation technologique</h3>
+                <p class="text-gray-600">
+                  Lancement de notre plateforme moderne avec architecture Angular/Java JEE. 
+                  Introduction de l'IA dans nos solutions.
+                </p>
+              </div>
+            </div>
+            <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-primary-600 rounded-full"></div>
+            <div class="flex-1 pl-8"></div>
+          </div>
+
+          <!-- 2019 -->
+          <div class="relative flex items-center">
+            <div class="flex-1 pr-8"></div>
+            <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-primary-600 rounded-full"></div>
+            <div class="flex-1 text-left pl-8">
+              <div class="bg-white p-6 rounded-xl shadow-lg">
+                <h3 class="text-xl font-bold text-gray-900 mb-2">2019 - Expansion</h3>
+                <p class="text-gray-600">
+                  Croissance accélérée avec 500+ clients. Lancement de notre centre 
+                  de formation et certification professionnelle.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2022 -->
+          <div class="relative flex items-center">
+            <div class="flex-1 text-right pr-8">
+              <div class="bg-white p-6 rounded-xl shadow-lg">
+                <h3 class="text-xl font-bold text-gray-900 mb-2">2022 - Leader du marché</h3>
+                <p class="text-gray-600">
+                  Reconnaissance comme leader français des solutions de pricing. 
+                  Gestion de plus d'1 million de SKU pour nos clients.
+                </p>
+              </div>
+            </div>
+            <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-primary-600 rounded-full"></div>
+            <div class="flex-1 pl-8"></div>
+          </div>
+
+          <!-- 2025 -->
+          <div class="relative flex items-center">
+            <div class="flex-1 pr-8"></div>
+            <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-secondary-600 rounded-full"></div>
+            <div class="flex-1 text-left pl-8">
+              <div class="bg-secondary-50 p-6 rounded-xl shadow-lg border-2 border-secondary-200">
+                <h3 class="text-xl font-bold text-gray-900 mb-2">2025 - Nouvelle ambition</h3>
+                <p class="text-gray-600">
+                  Poursuite de l'innovation avec l'IA générative et expansion 
+                  vers de nouveaux marchés européens.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Offices -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-gray-900 mb-4">
+          Nos bureaux
+        </h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Basés au cœur de Paris, nous rayonnons sur toute la France et l'Europe
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <h3 class="text-2xl font-bold text-gray-900 mb-6">Siège social - Paris</h3>
+          <div class="space-y-4 mb-8">
+            <div>
+              <h4 class="font-semibold text-gray-900">Adresse</h4>
+              <p class="text-gray-600">
+                15 Avenue des Champs-Élysées<br>
+                75008 Paris, France
+              </p>
+            </div>
+            <div>
+              <h4 class="font-semibold text-gray-900">Transports</h4>
+              <p class="text-gray-600">
+                Métro : Franklin D. Roosevelt (Lignes 1, 9)<br>
+                RER : Charles de Gaulle - Étoile (Lignes A)
+              </p>
+            </div>
+            <div>
+              <h4 class="font-semibold text-gray-900">Horaires</h4>
+              <p class="text-gray-600">
+                Lundi - Vendredi : 9h00 - 18h00<br>
+                Sur rendez-vous uniquement
+              </p>
+            </div>
+          </div>
+          <a href="/contact" class="inline-flex items-center px-6 py-3 bg-primary-600 text-white font-semibold rounded-lg hover:bg-primary-700 transition-colors">
+            Prendre rendez-vous
+            <ArrowRight class="ml-2 h-5 w-5" />
+          </a>
+        </div>
+
+        <div class="bg-gray-100 rounded-2xl h-96 flex items-center justify-center">
+          <div class="text-center text-gray-500">
+            <div class="text-6xl mb-4">🗼</div>
+            <p>Carte interactive Paris</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-20 bg-primary-600">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-4xl font-bold text-white mb-4">
+        Rejoignez l'aventure Booper
+      </h2>
+      <p class="text-xl text-primary-100 mb-8 max-w-2xl mx-auto">
+        Que vous soyez client, partenaire ou futur collaborateur, découvrez comment nous pouvons grandir ensemble
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/contact" class="inline-flex items-center px-8 py-4 bg-white text-primary-600 font-semibold rounded-lg hover:bg-gray-50 transition-colors">
+          Nous contacter
+          <ArrowRight class="ml-2 h-5 w-5" />
+        </a>
+        <a href="/solutions" class="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white/10 transition-colors">
+          Découvrir nos solutions
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>center justify-center">
+                <Target class="h-4 w-4 text-primary-600" />
+              </div>
+              <span class="text-gray-700">Solutions sur-mesure adaptées à votre secteur</span>
+            </div>
+            <div class="flex items-center space-x-3">
+              <div class="bg-primary-100 w-8 h-8 rounded-full flex items-center justify-center">
+                <Users class="h-4 w-4 text-primary-600" />
+              </div>
+              <span class="text-gray-700">Accompagnement personnalisé par nos experts</span>
+            </div>
+            <div class="flex items-center space-x-3">
+              <div class="bg-primary-100 w-8 h-8 rounded-full flex items-

@@ -1,0 +1,448 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { Quote, ArrowRight, Users, TrendingUp, Award } from 'lucide-react';
+---
+
+<BaseLayout title="Nos Clients - Booper" description="Découvrez les success stories de nos clients et leur transformation pricing">
+  <!-- Hero Section -->
+  <section class="pt-32 pb-20 bg-gradient-to-br from-primary-50 to-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-4xl mx-auto">
+        <h1 class="text-5xl font-bold text-gray-900 mb-6">
+          Ils nous font 
+          <span class="text-primary-600">confiance</span>
+        </h1>
+        <p class="text-xl text-gray-600 mb-8">
+          Découvrez comment nos clients transforment leur performance pricing et maximisent leur rentabilité
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <div>
+          <div class="text-4xl font-bold text-primary-600 mb-2">500+</div>
+          <div class="text-gray-600">Clients actifs</div>
+        </div>
+        <div>
+          <div class="text-4xl font-bold text-primary-600 mb-2">15 ans</div>
+          <div class="text-gray-600">D'expérience</div>
+        </div>
+        <div>
+          <div class="text-4xl font-bold text-primary-600 mb-2">98%</div>
+          <div class="text-gray-600">Satisfaction client</div>
+        </div>
+        <div>
+          <div class="text-4xl font-bold text-primary-600 mb-2">1M+</div>
+          <div class="text-gray-600">SKU optimisés</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Industry Sectors -->
+  <section class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-gray-900 mb-4">
+          Nos secteurs d'expertise
+        </h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Une expertise reconnue dans de nombreux secteurs d'activité
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+          <div class="bg-primary-100 w-12 h-12 rounded-lg flex items-center justify-center mb-6">
+            <Users class="h-6 w-6 text-primary-600" />
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-4">Grande Distribution</h3>
+          <p class="text-gray-600 mb-4">
+            Optimisation des prix et marges pour les enseignes de grande distribution alimentaire et spécialisée.
+          </p>
+          <div class="text-sm text-gray-500">
+            Carrefour, Monoprix, Système U, Leclerc...
+          </div>
+        </div>
+
+        <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+          <div class="bg-secondary-100 w-12 h-12 rounded-lg flex items-center justify-center mb-6">
+            <TrendingUp class="h-6 w-6 text-secondary-600" />
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-4">E-commerce</h3>
+          <p class="text-gray-600 mb-4">
+            Solutions de pricing dynamique pour les pure players et marketplaces digitales.
+          </p>
+          <div class="text-sm text-gray-500">
+            Cdiscount, Fnac, Amazon Marketplace...
+          </div>
+        </div>
+
+        <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+          <div class="bg-orange-100 w-12 h-12 rounded-lg flex items-center justify-center mb-6">
+            <Award class="h-6 w-6 text-orange-600" />
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-4">Automobile</h3>
+          <p class="text-gray-600 mb-4">
+            Pricing intelligent pour pièces détachées, accessoires et services automobiles.
+          </p>
+          <div class="text-sm text-gray-500">
+            Peugeot, Renault, Norauto, Feu Vert...
+          </div>
+        </div>
+
+        <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+          <div class="bg-purple-100 w-12 h-12 rounded-lg flex items-center justify-center mb-6">
+            <Users class="h-6 w-6 text-purple-600" />
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-4">Bricolage & Jardin</h3>
+          <p class="text-gray-600 mb-4">
+            Optimisation tarifaire pour les enseignes de bricolage et jardinage.
+          </p>
+          <div class="text-sm text-gray-500">
+            Leroy Merlin, Castorama, Truffaut...
+          </div>
+        </div>
+
+        <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+          <div class="bg-green-100 w-12 h-12 rounded-lg flex items-center justify-center mb-6">
+            <TrendingUp class="h-6 w-6 text-green-600" />
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-4">Mode & Lifestyle</h3>
+          <p class="text-gray-600 mb-4">
+            Gestion des prix et promotions pour le secteur textile et lifestyle.
+          </p>
+          <div class="text-sm text-gray-500">
+            Galeries Lafayette, Printemps, Zadig & Voltaire...
+          </div>
+        </div>
+
+        <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+          <div class="bg-blue-100 w-12 h-12 rounded-lg flex items-center justify-center mb-6">
+            <Award class="h-6 w-6 text-blue-600" />
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-4">Santé & Bien-être</h3>
+          <p class="text-gray-600 mb-4">
+            Solutions pricing pour pharmacies, parapharmacies et produits de santé.
+          </p>
+          <div class="text-sm text-gray-500">
+            Pharmashop, Santédiscount, Doctipharma...
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Success Stories -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-gray-900 mb-4">
+          Success Stories
+        </h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Des résultats concrets et mesurables pour nos clients
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div class="bg-gradient-to-br from-primary-50 to-primary-100 p-8 rounded-2xl">
+          <div class="flex items-center mb-6">
+            <Quote class="h-8 w-8 text-primary-600 mr-4" />
+            <div>
+              <h3 class="text-xl font-bold text-gray-900">Grande Enseigne Alimentaire</h3>
+              <div class="text-primary-600 font-semibold">Hypermarché • 150 magasins</div>
+            </div>
+          </div>
+          
+          <blockquote class="text-lg text-gray-700 mb-6 italic">
+            "Grâce à Booper, nous avons optimisé nos prix sur plus de 50 000 références et augmenté 
+            notre marge globale de 18% en seulement 6 mois."
+          </blockquote>
+
+          <div class="grid grid-cols-3 gap-4 mb-6">
+            <div class="text-center">
+              <div class="text-2xl font-bold text-primary-600">+18%</div>
+              <div class="text-sm text-gray-600">Marge globale</div>
+            </div>
+            <div class="text-center">
+              <div class="text-2xl font-bold text-primary-600">50K</div>
+              <div class="text-sm text-gray-600">SKU optimisés</div>
+            </div>
+            <div class="text-center">
+              <div class="text-2xl font-bold text-primary-600">6 mois</div>
+              <div class="text-sm text-gray-600">Délai ROI</div>
+            </div>
+          </div>
+
+          <div class="text-sm text-gray-600">
+            <strong>Défis :</strong> Concurrence intense, volatilité des coûts, gestion complexe multi-enseignes
+          </div>
+        </div>
+
+        <div class="bg-gradient-to-br from-secondary-50 to-secondary-100 p-8 rounded-2xl">
+          <div class="flex items-center mb-6">
+            <Quote class="h-8 w-8 text-secondary-600 mr-4" />
+            <div>
+              <h3 class="text-xl font-bold text-gray-900">Leader E-commerce</h3>
+              <div class="text-secondary-600 font-semibold">Marketplace • 2M de visiteurs/mois</div>
+            </div>
+          </div>
+          
+          <blockquote class="text-lg text-gray-700 mb-6 italic">
+            "L'automatisation du pricing nous a permis de rester compétitifs tout en préservant nos marges. 
+            Le ROI a été atteint en 4 mois."
+          </blockquote>
+
+          <div class="grid grid-cols-3 gap-4 mb-6">
+            <div class="text-center">
+              <div class="text-2xl font-bold text-secondary-600">+25%</div>
+              <div class="text-sm text-gray-600">Compétitivité prix</div>
+            </div>
+            <div class="text-center">
+              <div class="text-2xl font-bold text-secondary-600">-60%</div>
+              <div class="text-sm text-gray-600">Temps gestion prix</div>
+            </div>
+            <div class="text-center">
+              <div class="text-2xl font-bold text-secondary-600">4 mois</div>
+              <div class="text-sm text-gray-600">ROI</div>
+            </div>
+          </div>
+
+          <div class="text-sm text-gray-600">
+            <strong>Défis :</strong> Veille concurrentielle 24/7, réactivité prix, gestion catalogue 1M+ SKU
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-gray-900 mb-4">
+          Ce que disent nos clients
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-white p-6 rounded-xl shadow-lg">
+          <div class="flex items-center mb-4">
+            <div class="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center mr-4">
+              <span class="text-primary-600 font-bold text-lg">JD</span>
+            </div>
+            <div>
+              <div class="font-semibold text-gray-900">Jean Dupont</div>
+              <div class="text-sm text-gray-600">Directeur Commercial</div>
+            </div>
+          </div>
+          <p class="text-gray-700 italic">
+            "Interface intuitive et résultats rapides. L'équipe Booper nous accompagne parfaitement 
+            dans notre transformation digitale."
+          </p>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow-lg">
+          <div class="flex items-center mb-4">
+            <div class="w-12 h-12 bg-secondary-100 rounded-full flex items-center justify-center mr-4">
+              <span class="text-secondary-600 font-bold text-lg">ML</span>
+            </div>
+            <div>
+              <div class="font-semibold text-gray-900">Marie Lemaire</div>
+              <div class="text-sm text-gray-600">Responsable Pricing</div>
+            </div>
+          </div>
+          <p class="text-gray-700 italic">
+            "Les fonctionnalités d'automatisation nous font gagner un temps précieux. 
+            Notre équipe peut se concentrer sur la stratégie plutôt que sur les tâches répétitives."
+          </p>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow-lg">
+          <div class="flex items-center mb-4">
+            <div class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mr-4">
+              <span class="text-orange-600 font-bold text-lg">PM</span>
+            </div>
+            <div>
+              <div class="font-semibold text-gray-900">Pierre Martin</div>
+              <div class="text-sm text-gray-600">DSI</div>
+            </div>
+          </div>
+          <p class="text-gray-700 italic">
+            "L'intégration avec nos systèmes existants s'est faite sans problème. 
+            L'architecture moderne de Booper facilite grandement la maintenance."
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Partner Logos -->
+  <section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-2xl font-bold text-gray-900 mb-4">
+          Ils nous font confiance
+        </h2>
+      </div>
+      
+      <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center opacity-60">
+        <div class="text-center">
+          <div class="h-16 bg-gray-100 rounded-lg flex items-center justify-center">
+            <span class="text-gray-500 font-bold">CARREFOUR</span>
+          </div>
+        </div>
+        <div class="text-center">
+          <div class="h-16 bg-gray-100 rounded-lg flex items-center justify-center">
+            <span class="text-gray-500 font-bold">MONOPRIX</span>
+          </div>
+        </div>
+        <div class="text-center">
+          <div class="h-16 bg-gray-100 rounded-lg flex items-center justify-center">
+            <span class="text-gray-500 font-bold">LECLERC</span>
+          </div>
+        </div>
+        <div class="text-center">
+          <div class="h-16 bg-gray-100 rounded-lg flex items-center justify-center">
+            <span class="text-gray-500 font-bold">FNAC</span>
+          </div>
+        </div>
+        <div class="text-center">
+          <div class="h-16 bg-gray-100 rounded-lg flex items-center justify-center">
+            <span class="text-gray-500 font-bold">NORAUTO</span>
+          </div>
+        </div>
+        <div class="text-center">
+          <div class="h-16 bg-gray-100 rounded-lg flex items-center justify-center">
+            <span class="text-gray-500 font-bold">LEROY MERLIN</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Case Study Detailed -->
+  <section class="py-20 bg-gradient-to-br from-primary-50 to-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-gray-900 mb-4">
+          Étude de cas détaillée
+        </h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Comment une grande enseigne a transformé sa performance pricing
+        </p>
+      </div>
+
+      <div class="bg-white rounded-2xl shadow-xl p-8 lg:p-12">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-6">
+              Transformation digitale d'une enseigne de bricolage
+            </h3>
+            
+            <div class="space-y-6">
+              <div>
+                <h4 class="font-semibold text-gray-900 mb-2">Contexte initial</h4>
+                <p class="text-gray-600">
+                  Gestion manuelle des prix sur 80 000 références, processus long et peu réactif face à la concurrence.
+                </p>
+              </div>
+              
+              <div>
+                <h4 class="font-semibold text-gray-900 mb-2">Solution mise en place</h4>
+                <ul class="text-gray-600 space-y-1">
+                  <li>• Automatisation du pricing sur l'ensemble du catalogue</li>
+                  <li>• Veille concurrentielle en temps réel</li>
+                  <li>• Optimisation des promotions saisonnières</li>
+                  <li>• Formation des équipes aux nouveaux outils</li>
+                </ul>
+              </div>
+              
+              <div>
+                <h4 class="font-semibold text-gray-900 mb-2">Bénéfices obtenus</h4>
+                <ul class="text-gray-600 space-y-1">
+                  <li>• Réduction de 70% du temps de gestion des prix</li>
+                  <li>• Amélioration de 22% de la marge brute</li>
+                  <li>• Augmentation de 15% du CA sur les produits saisonniers</li>
+                  <li>• ROI atteint en 8 mois</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="space-y-6">
+            <div class="bg-gradient-to-br from-primary-500 to-primary-700 p-6 rounded-xl text-white">
+              <h4 class="text-lg font-semibold mb-4">Résultats en chiffres</h4>
+              <div class="grid grid-cols-2 gap-4">
+                <div class="text-center">
+                  <div class="text-3xl font-bold">+22%</div>
+                  <div class="text-primary-100 text-sm">Marge brute</div>
+                </div>
+                <div class="text-center">
+                  <div class="text-3xl font-bold">-70%</div>
+                  <div class="text-primary-100 text-sm">Temps gestion</div>
+                </div>
+                <div class="text-center">
+                  <div class="text-3xl font-bold">80K</div>
+                  <div class="text-primary-100 text-sm">SKU automatisés</div>
+                </div>
+                <div class="text-center">
+                  <div class="text-3xl font-bold">8 mois</div>
+                  <div class="text-primary-100 text-sm">Retour sur investissement</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-gray-50 p-6 rounded-xl">
+              <h4 class="font-semibold text-gray-900 mb-4">Timeline du projet</h4>
+              <div class="space-y-3">
+                <div class="flex items-center">
+                  <div class="w-3 h-3 bg-primary-600 rounded-full mr-3"></div>
+                  <span class="text-sm text-gray-600"><strong>Mois 1-2 :</strong> Audit et paramétrage</span>
+                </div>
+                <div class="flex items-center">
+                  <div class="w-3 h-3 bg-primary-600 rounded-full mr-3"></div>
+                  <span class="text-sm text-gray-600"><strong>Mois 3-4 :</strong> Déploiement et formation</span>
+                </div>
+                <div class="flex items-center">
+                  <div class="w-3 h-3 bg-primary-600 rounded-full mr-3"></div>
+                  <span class="text-sm text-gray-600"><strong>Mois 5-6 :</strong> Optimisation et ajustements</span>
+                </div>
+                <div class="flex items-center">
+                  <div class="w-3 h-3 bg-secondary-600 rounded-full mr-3"></div>
+                  <span class="text-sm text-gray-600"><strong>Mois 8 :</strong> ROI atteint</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-20 bg-primary-600">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-4xl font-bold text-white mb-4">
+        Rejoignez nos clients satisfaits
+      </h2>
+      <p class="text-xl text-primary-100 mb-8 max-w-2xl mx-auto">
+        Découvrez comment Booper peut transformer votre performance pricing et vous donner un avantage concurrentiel durable
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/contact" class="inline-flex items-center px-8 py-4 bg-white text-primary-600 font-semibold rounded-lg hover:bg-gray-50 transition-colors">
+          Demander une démo
+          <ArrowRight class="ml-2 h-5 w-5" />
+        </a>
+        <a href="/solutions" class="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white/10 transition-colors">
+          Voir nos solutions
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

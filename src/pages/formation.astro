@@ -1,0 +1,470 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { GraduationCap, Users, Clock, Award, CheckCircle, ArrowRight, Target, TrendingUp } from 'lucide-react';
+---
+
+<BaseLayout title="Formation - Booper" description="Formations pricing pour développer vos compétences et celles de vos équipes">
+  <!-- Hero Section -->
+  <section class="pt-32 pb-20 bg-gradient-to-br from-primary-50 to-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-4xl mx-auto">
+        <h1 class="text-5xl font-bold text-gray-900 mb-6">
+          Formations 
+          <span class="text-primary-600">Pricing</span>
+          Qualifiantes
+        </h1>
+        <p class="text-xl text-gray-600 mb-8">
+          Développez l'expertise pricing de vos équipes avec nos formations certifiantes alliant théorie et pratique sur nos logiciels
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Training Stats -->
+  <section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <div>
+          <div class="text-4xl font-bold text-primary-600 mb-2">2000+</div>
+          <div class="text-gray-600">Professionnels formés</div>
+        </div>
+        <div>
+          <div class="text-4xl font-bold text-primary-600 mb-2">95%</div>
+          <div class="text-gray-600">Satisfaction stagiaires</div>
+        </div>
+        <div>
+          <div class="text-4xl font-bold text-primary-600 mb-2">15+</div>
+          <div class="text-gray-600">Années d'expérience</div>
+        </div>
+        <div>
+          <div class="text-4xl font-bold text-primary-600 mb-2">50+</div>
+          <div class="text-gray-600">Entreprises accompagnées</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Training Benefits -->
+  <section class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-gray-900 mb-4">
+          Pourquoi choisir nos formations ?
+        </h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Une approche unique mêlant expertise théorique et maîtrise pratique de nos outils
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+          <div class="bg-primary-100 w-12 h-12 rounded-lg flex items-center justify-center mb-6">
+            <GraduationCap class="h-6 w-6 text-primary-600" />
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-4">Expertise Reconnue</h3>
+          <p class="text-gray-600">
+            Formations dispensées par nos experts pricing avec plus de 15 ans d'expérience 
+            dans l'optimisation tarifaire.
+          </p>
+        </div>
+
+        <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+          <div class="bg-secondary-100 w-12 h-12 rounded-lg flex items-center justify-center mb-6">
+            <Target class="h-6 w-6 text-secondary-600" />
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-4">Approche Pratique</h3>
+          <p class="text-gray-600">
+            Chaque formation combine théorie et pratique avec des exercices concrets 
+            sur nos logiciels et des cas d'usage réels.
+          </p>
+        </div>
+
+        <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+          <div class="bg-orange-100 w-12 h-12 rounded-lg flex items-center justify-center mb-6">
+            <Award class="h-6 w-6 text-orange-600" />
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-4">Certification</h3>
+          <p class="text-gray-600">
+            Obtenez une certification reconnue qui valorise vos compétences pricing 
+            auprès de votre entreprise et sur le marché.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Training Modules -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-gray-900 mb-4">
+          Nos modules de formation
+        </h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Des formations modulaires adaptées à vos besoins et votre niveau d'expertise
+        </p>
+      </div>
+
+      <div class="space-y-8">
+        <!-- Module 1 -->
+        <div class="bg-gradient-to-r from-primary-500 to-primary-700 rounded-2xl p-8 text-white">
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
+            <div class="lg:col-span-2">
+              <h3 class="text-2xl font-bold mb-4">Module 1 : Optimisation du Pricing</h3>
+              <p class="text-primary-100 mb-6">
+                Maîtrisez les fondamentaux de l'optimisation tarifaire et apprenez à définir 
+                une stratégie pricing efficace adaptée à votre secteur d'activité.
+              </p>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="flex items-center space-x-3">
+                  <CheckCircle class="h-5 w-5 text-primary-200" />
+                  <span class="text-primary-100">Stratégies de pricing</span>
+                </div>
+                <div class="flex items-center space-x-3">
+                  <CheckCircle class="h-5 w-5 text-primary-200" />
+                  <span class="text-primary-100">Analyse concurrentielle</span>
+                </div>
+                <div class="flex items-center space-x-3">
+                  <CheckCircle class="h-5 w-5 text-primary-200" />
+                  <span class="text-primary-100">Élasticité prix</span>
+                </div>
+                <div class="flex items-center space-x-3">
+                  <CheckCircle class="h-5 w-5 text-primary-200" />
+                  <span class="text-primary-100">Segmentation marché</span>
+                </div>
+              </div>
+            </div>
+            <div class="text-center lg:text-right">
+              <div class="bg-white/20 rounded-xl p-6">
+                <div class="flex items-center justify-center mb-4">
+                  <Clock class="h-6 w-6 mr-2" />
+                  <span class="font-semibold">2 jours</span>
+                </div>
+                <div class="flex items-center justify-center mb-4">
+                  <Users class="h-6 w-6 mr-2" />
+                  <span class="font-semibold">12 participants max</span>
+                </div>
+                <a href="/contact" class="inline-flex items-center px-6 py-3 bg-white text-primary-600 font-semibold rounded-lg hover:bg-gray-50 transition-colors">
+                  S'inscrire
+                  <ArrowRight class="ml-2 h-5 w-5" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Module 2 -->
+        <div class="bg-gradient-to-r from-secondary-500 to-secondary-700 rounded-2xl p-8 text-white">
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
+            <div class="lg:col-span-2">
+              <h3 class="text-2xl font-bold mb-4">Module 2 : Pricing Dynamique</h3>
+              <p class="text-secondary-100 mb-6">
+                Découvrez les techniques avancées de pricing dynamique et l'utilisation 
+                de l'intelligence artificielle pour optimiser vos prix en temps réel.
+              </p>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="flex items-center space-x-3">
+                  <CheckCircle class="h-5 w-5 text-secondary-200" />
+                  <span class="text-secondary-100">Algorithmes de pricing</span>
+                </div>
+                <div class="flex items-center space-x-3">
+                  <CheckCircle class="h-5 w-5 text-secondary-200" />
+                  <span class="text-secondary-100">Machine Learning</span>
+                </div>
+                <div class="flex items-center space-x-3">
+                  <CheckCircle class="h-5 w-5 text-secondary-200" />
+                  <span class="text-secondary-100">Pricing temps réel</span>
+                </div>
+                <div class="flex items-center space-x-3">
+                  <CheckCircle class="h-5 w-5 text-secondary-200" />
+                  <span class="text-secondary-100">Prévision demande</span>
+                </div>
+              </div>
+            </div>
+            <div class="text-center lg:text-right">
+              <div class="bg-white/20 rounded-xl p-6">
+                <div class="flex items-center justify-center mb-4">
+                  <Clock class="h-6 w-6 mr-2" />
+                  <span class="font-semibold">3 jours</span>
+                </div>
+                <div class="flex items-center justify-center mb-4">
+                  <Users class="h-6 w-6 mr-2" />
+                  <span class="font-semibold">10 participants max</span>
+                </div>
+                <a href="/contact" class="inline-flex items-center px-6 py-3 bg-white text-secondary-600 font-semibold rounded-lg hover:bg-gray-50 transition-colors">
+                  S'inscrire
+                  <ArrowRight class="ml-2 h-5 w-5" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Module 3 -->
+        <div class="bg-gradient-to-r from-orange-500 to-orange-700 rounded-2xl p-8 text-white">
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
+            <div class="lg:col-span-2">
+              <h3 class="text-2xl font-bold mb-4">Module 3 : Efficacité de la Promotion</h3>
+              <p class="text-orange-100 mb-6">
+                Optimisez vos campagnes promotionnelles pour maximiser leur impact 
+                sur les ventes tout en préservant vos marges.
+              </p>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="flex items-center space-x-3">
+                  <CheckCircle class="h-5 w-5 text-orange-200" />
+                  <span class="text-orange-100">Planification promotions</span>
+                </div>
+                <div class="flex items-center space-x-3">
+                  <CheckCircle class="h-5 w-5 text-orange-200" />
+                  <span class="text-orange-100">Mesure ROI promotionnel</span>
+                </div>
+                <div class="flex items-center space-x-3">
+                  <CheckCircle class="h-5 w-5 text-orange-200" />
+                  <span class="text-orange-100">Cannibalisation produits</span>
+                </div>
+                <div class="flex items-center space-x-3">
+                  <CheckCircle class="h-5 w-5 text-orange-200" />
+                  <span class="text-orange-100">Optimisation calendaire</span>
+                </div>
+              </div>
+            </div>
+            <div class="text-center lg:text-right">
+              <div class="bg-white/20 rounded-xl p-6">
+                <div class="flex items-center justify-center mb-4">
+                  <Clock class="h-6 w-6 mr-2" />
+                  <span class="font-semibold">2 jours</span>
+                </div>
+                <div class="flex items-center justify-center mb-4">
+                  <Users class="h-6 w-6 mr-2" />
+                  <span class="font-semibold">15 participants max</span>
+                </div>
+                <a href="/contact" class="inline-flex items-center px-6 py-3 bg-white text-orange-600 font-semibold rounded-lg hover:bg-gray-50 transition-colors">
+                  S'inscrire
+                  <ArrowRight class="ml-2 h-5 w-5" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Module 4 -->
+        <div class="bg-gradient-to-r from-purple-500 to-purple-700 rounded-2xl p-8 text-white">
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
+            <div class="lg:col-span-2">
+              <h3 class="text-2xl font-bold mb-4">Module 4 : Construction d'Indicateurs de Performance</h3>
+              <p class="text-purple-100 mb-6">
+                Apprenez à construire et interpréter les KPI essentiels pour piloter 
+                efficacement votre stratégie pricing et mesurer vos performances.
+              </p>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="flex items-center space-x-3">
+                  <CheckCircle class="h-5 w-5 text-purple-200" />
+                  <span class="text-purple-100">KPI pricing essentiels</span>
+                </div>
+                <div class="flex items-center space-x-3">
+                  <CheckCircle class="h-5 w-5 text-purple-200" />
+                  <span class="text-purple-100">Tableaux de bord</span>
+                </div>
+                <div class="flex items-center space-x-3">
+                  <CheckCircle class="h-5 w-5 text-purple-200" />
+                  <span class="text-purple-100">Analyse de la performance</span>
+                </div>
+                <div class="flex items-center space-x-3">
+                  <CheckCircle class="h-5 w-5 text-purple-200" />
+                  <span class="text-purple-100">Reporting automatisé</span>
+                </div>
+              </div>
+            </div>
+            <div class="text-center lg:text-right">
+              <div class="bg-white/20 rounded-xl p-6">
+                <div class="flex items-center justify-center mb-4">
+                  <Clock class="h-6 w-6 mr-2" />
+                  <span class="font-semibold">1 jour</span>
+                </div>
+                <div class="flex items-center justify-center mb-4">
+                  <Users class="h-6 w-6 mr-2" />
+                  <span class="font-semibold">12 participants max</span>
+                </div>
+                <a href="/contact" class="inline-flex items-center px-6 py-3 bg-white text-purple-600 font-semibold rounded-lg hover:bg-gray-50 transition-colors">
+                  S'inscrire
+                  <ArrowRight class="ml-2 h-5 w-5" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Training Formats -->
+  <section class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-gray-900 mb-4">
+          Formats de formation
+        </h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Choisissez le format qui convient le mieux à vos besoins et contraintes
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-white p-8 rounded-xl shadow-lg text-center">
+          <div class="bg-primary-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+            <Users class="h-8 w-8 text-primary-600" />
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-4">Formation Présentielle</h3>
+          <p class="text-gray-600 mb-6">
+            Sessions en groupe dans nos locaux parisiens ou dans vos bureaux pour un apprentissage collaboratif.
+          </p>
+          <ul class="text-sm text-gray-600 space-y-2 mb-8">
+            <li>• Interaction directe avec le formateur</li>
+            <li>• Échanges entre participants</li>
+            <li>• Exercices pratiques en groupe</li>
+            <li>• Matériel fourni</li>
+          </ul>
+          <div class="text-2xl font-bold text-primary-600 mb-2">À partir de 1 200€</div>
+          <div class="text-sm text-gray-500 mb-6">par participant</div>
+          <a href="/contact" class="w-full inline-flex items-center justify-center px-6 py-3 bg-primary-600 text-white font-semibold rounded-lg hover:bg-primary-700 transition-colors">
+            Réserver
+          </a>
+        </div>
+
+        <div class="bg-white p-8 rounded-xl shadow-lg text-center border-2 border-primary-200">
+          <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
+            <span class="bg-primary-600 text-white px-4 py-2 rounded-full text-sm font-semibold">POPULAIRE</span>
+          </div>
+          <div class="bg-secondary-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+            <TrendingUp class="h-8 w-8 text-secondary-600" />
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-4">Formation Hybride</h3>
+          <p class="text-gray-600 mb-6">
+            Combinaison de sessions en ligne et présentielle pour une flexibilité maximale et un suivi personnalisé.
+          </p>
+          <ul class="text-sm text-gray-600 space-y-2 mb-8">
+            <li>• Théorie en ligne à votre rythme</li>
+            <li>• Pratique en présentiel</li>
+            <li>• Suivi personnalisé</li>
+            <li>• Accès plateforme 6 mois</li>
+          </ul>
+          <div class="text-2xl font-bold text-secondary-600 mb-2">À partir de 900€</div>
+          <div class="text-sm text-gray-500 mb-6">par participant</div>
+          <a href="/contact" class="w-full inline-flex items-center justify-center px-6 py-3 bg-secondary-600 text-white font-semibold rounded-lg hover:bg-secondary-700 transition-colors">
+            Réserver
+          </a>
+        </div>
+
+        <div class="bg-white p-8 rounded-xl shadow-lg text-center">
+          <div class="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+            <GraduationCap class="h-8 w-8 text-orange-600" />
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-4">Formation Sur-Mesure</h3>
+          <p class="text-gray-600 mb-6">
+            Programme adapté à vos besoins spécifiques, vos outils et votre secteur d'activité.
+          </p>
+          <ul class="text-sm text-gray-600 space-y-2 mb-8">
+            <li>• Contenu personnalisé</li>
+            <li>• Cas d'usage métier</li>
+            <li>• Intégration vos outils</li>
+            <li>• Accompagnement post-formation</li>
+          </ul>
+          <div class="text-2xl font-bold text-orange-600 mb-2">Sur devis</div>
+          <div class="text-sm text-gray-500 mb-6">selon le programme</div>
+          <a href="/contact" class="w-full inline-flex items-center justify-center px-6 py-3 bg-orange-600 text-white font-semibold rounded-lg hover:bg-orange-700 transition-colors">
+            Demander un devis
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certification -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-4xl font-bold text-gray-900 mb-6">
+            Certification Pricing Professional
+          </h2>
+          <p class="text-lg text-gray-600 mb-8">
+            Validez vos compétences avec notre certification reconnue dans l'industrie. 
+            Un atout pour votre carrière et la performance de votre entreprise.
+          </p>
+          
+          <div class="space-y-4 mb-8">
+            <div class="flex items-center space-x-3">
+              <CheckCircle class="h-6 w-6 text-primary-600" />
+              <span class="text-gray-700">Certification valide 3 ans</span>
+            </div>
+            <div class="flex items-center space-x-3">
+              <CheckCircle class="h-6 w-6 text-primary-600" />
+              <span class="text-gray-700">Reconnue par les professionnels du secteur</span>
+            </div>
+            <div class="flex items-center space-x-3">
+              <CheckCircle class="h-6 w-6 text-primary-600" />
+              <span class="text-gray-700">Badge numérique LinkedIn</span>
+            </div>
+            <div class="flex items-center space-x-3">
+              <CheckCircle class="h-6 w-6 text-primary-600" />
+              <span class="text-gray-700">Formation continue incluse</span>
+            </div>
+          </div>
+
+          <a href="/contact" class="inline-flex items-center px-8 py-4 bg-primary-600 text-white font-semibold rounded-lg hover:bg-primary-700 transition-colors">
+            En savoir plus
+            <ArrowRight class="ml-2 h-5 w-5" />
+          </a>
+        </div>
+
+        <div class="relative">
+          <div class="bg-gradient-to-br from-primary-100 to-primary-200 rounded-2xl p-8">
+            <div class="text-center">
+              <Award class="h-20 w-20 text-primary-600 mx-auto mb-6" />
+              <h3 class="text-2xl font-bold text-gray-900 mb-4">Booper Certified</h3>
+              <p class="text-gray-600 mb-6">Pricing Professional</p>
+              <div class="bg-white rounded-lg p-6 shadow-lg">
+                <h4 class="font-semibold text-gray-900 mb-4">Prochaines sessions d'examen</h4>
+                <div class="space-y-3">
+                  <div class="flex justify-between items-center">
+                    <span class="text-gray-600">Paris</span>
+                    <span class="font-semibold text-primary-600">15 Mars 2025</span>
+                  </div>
+                  <div class="flex justify-between items-center">
+                    <span class="text-gray-600">Lyon</span>
+                    <span class="font-semibold text-primary-600">22 Avril 2025</span>
+                  </div>
+                  <div class="flex justify-between items-center">
+                    <span class="text-gray-600">En ligne</span>
+                    <span class="font-semibold text-primary-600">Tous les mois</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-20 bg-primary-600">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-4xl font-bold text-white mb-4">
+        Investissez dans l'expertise pricing de vos équipes
+      </h2>
+      <p class="text-xl text-primary-100 mb-8 max-w-2xl mx-auto">
+        Contactez-nous pour construire un programme de formation adapté à vos besoins spécifiques
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/contact" class="inline-flex items-center px-8 py-4 bg-white text-primary-600 font-semibold rounded-lg hover:bg-gray-50 transition-colors">
+          Demander un programme
+          <ArrowRight class="ml-2 h-5 w-5" />
+        </a>
+        <a href="/ressources" class="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white/10 transition-colors">
+          Voir nos ressources
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
