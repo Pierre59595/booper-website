@@ -1,0 +1,180 @@
+---
+// src/pages/actualites/index.astro
+import Layout from '../../layouts/Layout.astro';
+import ArticleCard from '../../components/ArticleCard.astro';
+import { promises as fs } from 'fs';
+import path from 'path';
+
+async function getArticles() {
+  try {
+    const contentDir = path.join(process.cwd(), 'src', 'content', 'articles');
+    const indexPath = path.join(contentDir, 'index.json');
+    
+    const indexContent = await fs.readFile(indexPath, 'utf8');
+    const articles = JSON.parse(indexContent);
+    
+    return articles
+      .filter(article => article.status === 'published')
+      .sort((a, b) => new Date(b.publishedAt) - new Date(a.publishedAt));
+      
+  } catch (error) {
+    console.error('Erreur lors de la lecture des articles:', error);
+    return [];
+  }
+}
+
+const articles = await getArticles();
+const featuredArticles = articles.filter(article => article.featured).slice(0, 3);
+const recentArticles = articles.slice(0, 6);
+
+// Récupérer tous les tags uniques
+const allTags = [...new Set(articles.flatMap(article => article.tags))];
+
+const pageTitle = "Actualités";
+const pageDescription = "Découvrez nos dernières actualités et articles de blog.";
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+  <main class="news-page">
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="container">
+        <h1 class="hero-title">Actualités</h1>
+        <p class="hero-description">
+          Restez informé avec nos dernières actualités, analyses et insights.
+        </p>
+      </div>
+    </section>
+
+    <!-- Articles en vedette -->
+    {featuredArticles.length > 0 && (
+      <section class="featured-section">
+        <div class="container">
+          <h2 class="section-title">Articles en vedette</h2>
+          <div class="featured-grid">
+            {featuredArticles.map((article) => (
+              <ArticleCard 
+                article={article} 
+                featured={true}
+                class="featured-card"
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+    )}
+
+    <!-- Liste des articles récents -->
+    <section class="articles-section">
+      <div class="container">
+        <h2 class="section-title">Derniers articles</h2>
+        
+        {recentArticles.length > 0 ? (
+          <div class="articles-grid" id="articles-grid">
+            {recentArticles.map((article) => (
+              <ArticleCard 
+                article={article} 
+                class="article-card"
+              />
+            ))}
+          </div>
+        ) : (
+          <div class="no-articles">
+            <p>Aucun article disponible pour le moment.</p>
+            <p>Créez votre premier article avec l'API !</p>
+          </div>
+        )}
+      </div>
+    </section>
+  </main>
+
+  <style>
+    .news-page {
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+
+    /* Hero Section */
+    .hero-section {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 4rem 0;
+      text-align: center;
+    }
+
+    .hero-title {
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .hero-description {
+      font-size: 1.2rem;
+      opacity: 0.9;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* Section Titles */
+    .section-title {
+      font-size: 2rem;
+      font-weight: 600;
+      margin-bottom: 2rem;
+      color: #2d3748;
+      text-align: center;
+    }
+
+    /* Featured Section */
+    .featured-section {
+      padding: 4rem 0;
+      background: #f7fafc;
+    }
+
+    .featured-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2rem;
+    }
+
+    /* Articles Section */
+    .articles-section {
+      padding: 4rem 0;
+    }
+
+    .articles-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    .no-articles {
+      text-align: center;
+      padding: 3rem 0;
+      color: #718096;
+    }
+
+    .no-articles p {
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero-title {
+        font-size: 2rem;
+      }
+
+      .featured-grid,
+      .articles-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</Layout>
