@@ -1,6 +1,6 @@
 ---
 // src/pages/actualites/index.astro
-import Layout from '../../layouts/Layout.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
 import ArticleCard from '../../components/ArticleCard.astro';
 import { promises as fs } from 'fs';
 import path from 'path';
@@ -25,156 +25,190 @@ async function getArticles() {
 
 const articles = await getArticles();
 const featuredArticles = articles.filter(article => article.featured).slice(0, 3);
-const recentArticles = articles.slice(0, 6);
+const recentArticles = articles.slice(0, 8);
 
-// Récupérer tous les tags uniques
-const allTags = [...new Set(articles.flatMap(article => article.tags))];
-
-const pageTitle = "Actualités";
-const pageDescription = "Découvrez nos dernières actualités et articles de blog.";
+const pageTitle = "Actualités & Insights | Booper";
+const pageDescription = "Découvrez nos dernières actualités, tendances du marché et insights sur l'optimisation pricing pour booster vos performances.";
 ---
 
-<Layout title={pageTitle} description={pageDescription}>
-  <main class="news-page">
-    <!-- Hero Section -->
-    <section class="hero-section">
-      <div class="container">
-        <h1 class="hero-title">Actualités</h1>
-        <p class="hero-description">
-          Restez informé avec nos dernières actualités, analyses et insights.
+<BaseLayout title={pageTitle} description={pageDescription}>
+  <!-- Hero Section -->
+  <section class="relative pt-32 pb-20 overflow-hidden">
+    <!-- Background avec gradient -->
+    <div class="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-purple-50"></div>
+    
+    <!-- Contenu principal -->
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-4xl mx-auto">
+        <h1 class="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
+          Actualités & 
+          <span class="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+            Insights
+          </span>
+        </h1>
+        
+        <p class="text-xl text-gray-600 mb-8 leading-relaxed">
+          Restez à la pointe des tendances pricing avec nos analyses d'experts, 
+          études de marché et conseils stratégiques pour optimiser vos performances.
         </p>
-      </div>
-    </section>
 
-    <!-- Articles en vedette -->
-    {featuredArticles.length > 0 && (
-      <section class="featured-section">
-        <div class="container">
-          <h2 class="section-title">Articles en vedette</h2>
-          <div class="featured-grid">
-            {featuredArticles.map((article) => (
-              <ArticleCard 
-                article={article} 
-                featured={true}
-                class="featured-card"
-              />
-            ))}
+        <!-- CTA vers Resources -->
+        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+          <a href="/ressources" 
+             class="inline-flex items-center px-8 py-4 bg-blue-600 text-white font-semibold rounded-xl hover:bg-blue-700 transition-all duration-200 shadow-lg hover:shadow-xl">
+            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+            </svg>
+            Centre de Ressources
+          </a>
+          <p class="text-gray-500 text-sm">
+            Guides, études de cas et contenus experts
+          </p>
+        </div>
+
+        <!-- Stats ou badges -->
+        <div class="flex flex-wrap justify-center gap-8 text-center">
+          <div class="flex flex-col">
+            <span class="text-3xl font-bold text-blue-600">500+</span>
+            <span class="text-gray-600 text-sm">Articles publiés</span>
+          </div>
+          <div class="flex flex-col">
+            <span class="text-3xl font-bold text-purple-600">50k+</span>
+            <span class="text-gray-600 text-sm">Lecteurs mensuels</span>
+          </div>
+          <div class="flex flex-col">
+            <span class="text-3xl font-bold text-green-600">15%</span>
+            <span class="text-gray-600 text-sm">Gain moyen en marge</span>
           </div>
         </div>
-      </section>
-    )}
+      </div>
+    </div>
+  </section>
 
-    <!-- Liste des articles récents -->
-    <section class="articles-section">
-      <div class="container">
-        <h2 class="section-title">Derniers articles</h2>
+  <!-- Articles en vedette -->
+  {featuredArticles.length > 0 && (
+    <section class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">
+            Articles en vedette
+          </h2>
+          <p class="text-lg text-gray-600">
+            Nos analyses les plus impactantes pour votre stratégie pricing
+          </p>
+        </div>
         
-        {recentArticles.length > 0 ? (
-          <div class="articles-grid" id="articles-grid">
-            {recentArticles.map((article) => (
-              <ArticleCard 
-                article={article} 
-                class="article-card"
-              />
-            ))}
-          </div>
-        ) : (
-          <div class="no-articles">
-            <p>Aucun article disponible pour le moment.</p>
-            <p>Créez votre premier article avec l'API !</p>
-          </div>
-        )}
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {featuredArticles.map((article) => (
+            <ArticleCard 
+              article={article} 
+              featured={true}
+            />
+          ))}
+        </div>
       </div>
     </section>
-  </main>
+  )}
 
-  <style>
-    .news-page {
-      min-height: 100vh;
+  <!-- Tous les articles -->
+  <section class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl font-bold text-gray-900 mb-4">
+          Derniers articles
+        </h2>
+        <p class="text-lg text-gray-600">
+          Toute notre expertise pricing à votre portée
+        </p>
+      </div>
+
+      {recentArticles.length > 0 ? (
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+          {recentArticles.map((article) => (
+            <ArticleCard article={article} />
+          ))}
+        </div>
+      ) : (
+        <!-- État vide avec design attractif -->
+        <div class="text-center py-16">
+          <div class="max-w-md mx-auto">
+            <div class="w-24 h-24 mx-auto mb-6 bg-blue-100 rounded-full flex items-center justify-center">
+              <svg class="w-12 h-12 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9.5a2.5 2.5 0 00-2.5-2.5H15"></path>
+              </svg>
+            </div>
+            
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">
+              Premiers articles en préparation
+            </h3>
+            
+            <p class="text-gray-600 mb-8">
+              Notre équipe d'experts prépare des contenus exclusifs sur les dernières 
+              tendances pricing et stratégies d'optimisation.
+            </p>
+
+            <!-- CTA vers resources en attendant -->
+            <div class="space-y-4">
+              <a href="/ressources" 
+                 class="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors">
+                Découvrir nos ressources actuelles
+                <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+              </a>
+              
+              <p class="text-sm text-gray-500">
+                En attendant, explorez nos guides et études de cas
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
+  </section>
+
+  <!-- Newsletter Section -->
+  <section class="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl font-bold text-white mb-6">
+        Ne manquez aucune actualité pricing
+      </h2>
+      
+      <p class="text-xl text-blue-100 mb-8">
+        Recevez nos derniers insights et analyses directement dans votre boîte email
+      </p>
+
+      <form class="max-w-md mx-auto flex gap-4">
+        <input 
+          type="email" 
+          placeholder="Votre adresse email professionnelle" 
+          class="flex-1 px-6 py-4 rounded-lg border-0 text-gray-900 placeholder-gray-500 focus:ring-2 focus:ring-white focus:outline-none"
+          required
+        />
+        <button 
+          type="submit" 
+          class="px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-50 transition-colors whitespace-nowrap">
+          S'abonner
+        </button>
+      </form>
+
+      <p class="text-blue-200 text-sm mt-4">
+        Pas de spam. Désinscription à tout moment.
+      </p>
+    </div>
+  </section>
+</BaseLayout>
+
+<script>
+  // Newsletter form
+  document.querySelector('form')?.addEventListener('submit', function(e) {
+    e.preventDefault();
+    const email = this.querySelector('input[type="email"]')?.value;
+    
+    if (email) {
+      // Ici vous pouvez ajouter votre logique d'inscription newsletter
+      alert('Merci pour votre inscription ! (Fonctionnalité à implémenter)');
+      this.reset();
     }
-
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 1rem;
-    }
-
-    /* Hero Section */
-    .hero-section {
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      color: white;
-      padding: 4rem 0;
-      text-align: center;
-    }
-
-    .hero-title {
-      font-size: 3rem;
-      font-weight: 700;
-      margin-bottom: 1rem;
-      text-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    }
-
-    .hero-description {
-      font-size: 1.2rem;
-      opacity: 0.9;
-      max-width: 600px;
-      margin: 0 auto;
-    }
-
-    /* Section Titles */
-    .section-title {
-      font-size: 2rem;
-      font-weight: 600;
-      margin-bottom: 2rem;
-      color: #2d3748;
-      text-align: center;
-    }
-
-    /* Featured Section */
-    .featured-section {
-      padding: 4rem 0;
-      background: #f7fafc;
-    }
-
-    .featured-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-      gap: 2rem;
-    }
-
-    /* Articles Section */
-    .articles-section {
-      padding: 4rem 0;
-    }
-
-    .articles-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-      gap: 2rem;
-      margin-bottom: 3rem;
-    }
-
-    .no-articles {
-      text-align: center;
-      padding: 3rem 0;
-      color: #718096;
-    }
-
-    .no-articles p {
-      margin-bottom: 1rem;
-      font-size: 1.1rem;
-    }
-
-    /* Responsive */
-    @media (max-width: 768px) {
-      .hero-title {
-        font-size: 2rem;
-      }
-
-      .featured-grid,
-      .articles-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
-</Layout>
+  });
+</script>
