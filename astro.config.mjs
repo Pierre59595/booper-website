@@ -4,8 +4,13 @@ import tailwind from '@astrojs/tailwind';
 
 export default defineConfig({
   integrations: [react(), tailwind()],
-  output: 'server', // ← Encore plus simple : mode serveur complet
-  site: 'https://booper-website.vercel.app'
+  output: 'hybrid', // hybrid au lieu de server
+  site: 'https://booper-website.vercel.app',
+  vite: {
+    ssr: {
+      external: ['node:fs', 'node:path']
+    }
+  }
 });
 
-// Vercel détectera automatiquement l'adaptateur nécessaire
+// Vercel détectera automatiquement qu'il faut utiliser l'adaptateur
