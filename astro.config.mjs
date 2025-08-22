@@ -1,16 +1,11 @@
 import { defineConfig } from 'astro/config';
 import react from '@astrojs/react';
 import tailwind from '@astrojs/tailwind';
+import vercel from '@astrojs/vercel/serverless';
 
 export default defineConfig({
   integrations: [react(), tailwind()],
-  output: 'hybrid', // hybrid au lieu de server
-  site: 'https://booper-website.vercel.app',
-  vite: {
-    ssr: {
-      external: ['node:fs', 'node:path']
-    }
-  }
+  output: 'hybrid',
+  adapter: vercel(),
+  site: 'https://booper-website.vercel.app'
 });
-
-// Vercel détectera automatiquement qu'il faut utiliser l'adaptateur
